@@ -22,7 +22,7 @@ class AmphibiansViewModel(
         private set
 
     init {
-
+        getAmphibiansInfo()
     }
 
     fun getAmphibiansInfo() {

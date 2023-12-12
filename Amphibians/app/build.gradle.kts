@@ -1,11 +1,12 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.10"
 }
 
 android {
     namespace = "com.raul.amphibians"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.raul.amphibians"
@@ -66,6 +67,8 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+
 
     //Retrofit service
     implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")  //parsing
@@ -77,7 +80,6 @@ dependencies {
     implementation("io.coil-kt:coil-compose:2.5.0")
 
     //testing
-    testImplementation("junit:junit:4.13.2")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1")
 
 
