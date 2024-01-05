@@ -11,6 +11,6 @@ class FakeNetworkBookshelfAppRepository : BookshelfAppRepository {
     }
 
     override suspend fun getBookUrl(id: String): BookInfo {
-        return FakeDataSource.booksMap.getValue(id)
+        return FakeDataSource.bookInfo
     }
 }

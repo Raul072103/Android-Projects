@@ -13,6 +13,5 @@ data class AccessInfo(
     val pdf: Pdf,
     val webReaderLink: String,
     val accessViewStatus: String,
-    val quoteSharingAllowed: Boolean,
-    val searchInfo: SearchInfo
+    val quoteSharingAllowed: Boolean
 )

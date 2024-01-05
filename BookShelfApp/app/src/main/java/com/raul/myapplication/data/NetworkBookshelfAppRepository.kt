@@ -13,7 +13,6 @@ class NetworkBookshelfAppRepository(
     }
 
     override suspend fun getBookUrl(id: String): BookInfo {
-        val bookInfo = bookshelfApiService.getBookInfo(id = id)
-        return bookInfo
+        return bookshelfApiService.getBookInfo(id = id)
     }
 }

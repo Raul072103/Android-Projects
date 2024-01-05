@@ -8,10 +8,14 @@ import retrofit2.Retrofit
 
 class DefaultAppContainer : AppContainer {
 
-    private val baseUrl: String = "https://www.googleapis.com/books/v1/volumes"
+    private val baseUrl: String = "https://www.googleapis.com/books/v1/volumes/"
 
     private val retrofit: Retrofit = Retrofit.Builder()
-        .addConverterFactory(Json.asConverterFactory("application/json".toMediaType()))
+        .addConverterFactory(
+            Json {
+                ignoreUnknownKeys = true
+            }.asConverterFactory("application/json".toMediaType())
+        )
         .baseUrl(baseUrl)
         .build()
 

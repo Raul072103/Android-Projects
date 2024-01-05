@@ -7,7 +7,6 @@ import com.raul.myapplication.data.DefaultAppContainer
 class BookShelfApplication : Application() {
 
     lateinit var container: AppContainer
-
     override fun onCreate() {
         super.onCreate()
         container = DefaultAppContainer()

@@ -5,10 +5,11 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Authors(
     val title: String,
+    val subtitle: String? = null,
     val authors: List<String>,
-    val publisher: String,
+    val publisher: String? = null,
     val publishedDate: String,
-    val description: String,
+    val description: String? = null,
     val industryIdentifiers: List<IndustryIdentifier>,
     val readingModes: ReadingMode,
     val pageCount: Int,

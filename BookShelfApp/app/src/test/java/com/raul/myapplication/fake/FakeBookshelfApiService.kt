@@ -10,6 +10,6 @@ class FakeBookshelfApiService : BookshelfApiService {
     }
 
     override suspend fun getBookInfo(id: String): BookInfo {
-        return FakeDataSource.booksMap.getValue(id)
+        return FakeDataSource.bookInfo
     }
 }

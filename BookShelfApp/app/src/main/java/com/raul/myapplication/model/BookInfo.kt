@@ -10,7 +10,7 @@ data class BookInfo (
     val etag: String,
     val selfLink: String,
     val volumeInfo: VolumeInfoBook,
-    val layerInfo: LayerInfo,
+    val layerInfo: LayerInfo? = null,
     val saleInfo: SaleInfo,
     val accessInfo: AccessInfo
 )

@@ -122,10 +122,10 @@ object FakeDataSource {
                 containsImageBubbles = false
             ),
             imageLinks = ImageLinks(
-                smallThumbnail = "http://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73ZrPECSv1MZzveWkQf4MY0f5wo8yyOHiO3kaKOsapZSYkYcc5yz20NUgRzIrOviM_CiBepvFPXXEpflVj2_UmQoxdN-tPwsWUnOcjPkdVKVP5T-emrADiQ7Lwd79TPn5uQJNhV&source=gbs_api",
-                thumbnail = "http://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72OmnhnjeAL8dC-vzCwq2CwoHzI-YaATxfTY06tgvWXP9zq22t_Nfolt7IFnMThBzdUoZki_7KImxV0jqkTBpRG3w-rk4LYRYDJkeaexSSwBvXJLAdKSRKqTBKH9Esbx3o-MPRxYV&source=gbs_api",
-                small = "http://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73tCFi3_qNXbtYUS_UpMZZrbz1XPgSkN_vY94jjrQx_CTqIfZF_-BzuSDw-n0bkgWVLkDma352lGE2cIjSnUIjC356Iye-OzZbMPGs-gc44ae450fJ_DC7ZAWZHr4k0jsMM4PfX&source=gbs_api",
-                medium = "http://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71BB4gAgOsOAztRZGBqigQV2vgJBteKReopKj0hU61xkNB7MvH-2XfQuzWMzy0H0FaSt_ctNAHPtYG8fIjhhbEBafzT2sB4fHjNtBNVEJxyTQ1-ljRPBTxGHJgNOl4mwuR9QxYV&source=gbs_api"
+                smallThumbnail = "https://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73ZrPECSv1MZzveWkQf4MY0f5wo8yyOHiO3kaKOsapZSYkYcc5yz20NUgRzIrOviM_CiBepvFPXXEpflVj2_UmQoxdN-tPwsWUnOcjPkdVKVP5T-emrADiQ7Lwd79TPn5uQJNhV&source=gbs_api",
+                thumbnail = "https://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72OmnhnjeAL8dC-vzCwq2CwoHzI-YaATxfTY06tgvWXP9zq22t_Nfolt7IFnMThBzdUoZki_7KImxV0jqkTBpRG3w-rk4LYRYDJkeaexSSwBvXJLAdKSRKqTBKH9Esbx3o-MPRxYV&source=gbs_api",
+                small = "https://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=2&edge=curl&imgtk=AFLRE73tCFi3_qNXbtYUS_UpMZZrbz1XPgSkN_vY94jjrQx_CTqIfZF_-BzuSDw-n0bkgWVLkDma352lGE2cIjSnUIjC356Iye-OzZbMPGs-gc44ae450fJ_DC7ZAWZHr4k0jsMM4PfX&source=gbs_api",
+                medium = "https://books.google.com/books/content?id=J9G50L3c14QC&printsec=frontcover&img=1&zoom=3&edge=curl&imgtk=AFLRE71BB4gAgOsOAztRZGBqigQV2vgJBteKReopKj0hU61xkNB7MvH-2XfQuzWMzy0H0FaSt_ctNAHPtYG8fIjhhbEBafzT2sB4fHjNtBNVEJxyTQ1-ljRPBTxGHJgNOl4mwuR9QxYV&source=gbs_api"
             ),
             language = "en",
             previewLink = "http://books.google.ro/books?id=J9G50L3c14QC&hl=&source=gbs_api",
@@ -176,8 +176,5 @@ object FakeDataSource {
         )
     )
 
-    var booksMap: HashMap<String, BookInfo> =
-        hashMapOf<String, BookInfo>(
-            "J9G50L3c14QC" to bookInfo
-        )
+    var bookUrls: MutableList<String> = mutableListOf(bookInfo.volumeInfo.imageLinks.thumbnail)
 }

@@ -10,6 +10,6 @@ interface BookshelfApiService {
     @GET("?q=jazz+history")
     suspend fun getAllBooks(): VolumeInfo
 
-    @GET("/{id}")
+    @GET("{id}")
     suspend fun getBookInfo(@Path("id") id: String): BookInfo
 }

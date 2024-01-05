@@ -1,4 +1,4 @@
-package com.example.marsphotos.fake.rules
+package com.raul.myapplication.rules
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -10,8 +10,8 @@ import org.junit.rules.TestWatcher
 import org.junit.runner.Description
 
 @OptIn(ExperimentalCoroutinesApi::class)
-public class TestDispatcherRule(
-    public val testDispatcher: TestDispatcher = UnconfinedTestDispatcher()
+class TestDispatcherRule(
+    private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher()
 ): TestWatcher() {
     override fun starting(description: Description) {
         Dispatchers.setMain(testDispatcher)

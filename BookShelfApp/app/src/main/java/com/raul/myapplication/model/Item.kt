@@ -10,5 +10,6 @@ data class Item(
     val selfLink: String,
     val volumeInfo: Authors,
     val saleInfo: SaleInfo,
-    val accessInfo: AccessInfo
+    val accessInfo: AccessInfo,
+    val searchInfo: SearchInfo? = null
 )
